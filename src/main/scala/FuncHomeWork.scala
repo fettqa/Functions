@@ -1,9 +1,7 @@
 object FuncHomeWork extends App {
     """частичное применение"""
   def partApply(f: (Int,Int) => Int, x: Int): Int => Int = f(100,_) + x
-  def calc50(i:Int, j: Int):Int = {
-    i + j
-  }
+  def calc50(i:Int, j: Int):Int = i + j
   println(partApply(calc50,0)(1))
   """композиции"""
   def f(x:Int): Double = x.toDouble
