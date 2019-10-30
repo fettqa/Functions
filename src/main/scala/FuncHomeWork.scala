@@ -1,8 +1,8 @@
 object FuncHomeWork extends App {
-    /*частичное применение*/
-  def partApply(f: (Int,Int) => Int, x: Int): Int => Int = f(_,4) - x
-  val partial = partApply(_ + _,2)
-  val result = partial(3)
+  /*частичное применение*/
+  def partApply(f: (Int,Int) => Int, x: Int): Int => Int = f(_,x)
+  val partial = partApply(_ * _,3)
+  val result = partial(-7)
   println(result)
   /*композиции*/
   def f(x:Int): Double = x.toDouble
